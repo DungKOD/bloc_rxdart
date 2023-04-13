@@ -124,15 +124,17 @@ class _ListMessageViewState extends State<ListMessageView> {
                                     "${data.author!.label}   *${MyDateUtils.dateFormat(data.createdAt!)}",
                                     style: const TextStyle(
                                         fontSize: 12, color: Colors.grey)),
-                                Text(
-                                  "  *${data.category!.name}",
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
-                                  softWrap: false,
-                                  style: const TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black),
+                                Expanded(
+                                  child: Text(
+                                    "  *${data.category!.name}",
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 1,
+                                    softWrap: false,
+                                    style: const TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
                                 ),
                               ],
                             ),
